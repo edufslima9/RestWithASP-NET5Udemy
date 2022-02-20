@@ -28,6 +28,9 @@ namespace RestWithASPNETUdemy
             var connection = Configuration["PostgreeConnection:PostgreeConnectionString"];
             services.AddDbContext<PostgreSQLContext>(options => options.UseNpgsql(connection));
 
+            // Versioning API
+            services.AddApiVersioning();
+
             // Dependency Injection
             services.AddScoped<IPersonService, PersonServiceImplementation>();
         }
