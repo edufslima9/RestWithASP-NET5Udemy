@@ -5,13 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="NovaPasta1\**" />
     <Compile Remove="NovaPasta2\**" />
-    <Content Remove="NovaPasta1\**" />
     <Content Remove="NovaPasta2\**" />
-    <EmbeddedResource Remove="NovaPasta1\**" />
     <EmbeddedResource Remove="NovaPasta2\**" />
-    <None Remove="NovaPasta1\**" />
     <None Remove="NovaPasta2\**" />
   </ItemGroup>
 
@@ -26,7 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Hypermedia\NovaPasta1\" />
+    <Folder Include="Hypermedia\NovaPasta\" />
     <Folder Include="Model\NovaPasta\" />
+    <Folder Include="NovaPasta1\" />
     <Folder Include="NovaPasta\" />
     <Folder Include="Repository\NovaPasta\" />
   </ItemGroup>

@@ -13,6 +13,8 @@ using Npgsql;
 using System.Collections.Generic;
 using RestWithASPNETUdemy.Repository.Generic;
 using Microsoft.Net.Http.Headers;
+using RestWithASPNETUdemy.Hypermedia.Filters;
+using RestWithASPNETUdemy.Hypermedia.Enricher;
 
 namespace RestWithASPNETUdemy
 {
@@ -54,6 +56,12 @@ namespace RestWithASPNETUdemy
             })
             .AddXmlSerializerFormatters();
 
+            var filterOptions = new HyperMediaFilterOptions();
+            filterOptions.ContentResponseEnricherList.Add(new PersonEnricher());
+            filterOptions.ContentResponseEnricherList.Add(new BookEnricher());
+
+            services.AddSingleton(filterOptions);
+
             // Versioning API
             services.AddApiVersioning();
 
@@ -82,6 +90,7 @@ namespace RestWithASPNETUdemy
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapControllerRoute("DefaultApi", "{controller=values}/{id?}");
             });
         }
 
