@@ -35,5 +35,17 @@ namespace RestWithASPNETUdemy.Repository.Implementations
 
             return user;
         }
+
+        public List<Person> FindByName(string firstName, string lastName)
+        {
+            if (!String.IsNullOrWhiteSpace(firstName) && !String.IsNullOrWhiteSpace(lastName))
+                return _context.Persons.Where(p => p.FirstName.Contains(firstName) && p.LastName.Contains(lastName)).ToList();
+            else if (String.IsNullOrWhiteSpace(firstName) && !String.IsNullOrWhiteSpace(lastName))
+                return _context.Persons.Where(p => p.LastName.Contains(lastName)).ToList();
+            else if (!String.IsNullOrWhiteSpace(firstName) && String.IsNullOrWhiteSpace(lastName))
+                return _context.Persons.Where(p => p.FirstName.Contains(firstName)).ToList();
+
+            return null;
+        }
     }
 }
