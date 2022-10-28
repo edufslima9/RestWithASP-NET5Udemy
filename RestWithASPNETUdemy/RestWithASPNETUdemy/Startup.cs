@@ -136,7 +136,7 @@ namespace RestWithASPNETUdemy
             services.AddScoped<IBookBusiness, BookBusinessImplementation>();
             services.AddTransient<ILoginBusiness, LoginBusinessImplementation>();
 
-            //services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
+            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
             //services.AddScoped<IBookRepository, BookRepositoryImplementation>();
             services.AddScoped<IUserRepository, UserRepositoryImplementation>();
 
