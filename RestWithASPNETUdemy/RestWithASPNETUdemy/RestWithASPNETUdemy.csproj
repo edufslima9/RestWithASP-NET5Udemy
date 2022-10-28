@@ -5,14 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="NovaPasta2\**" />
-    <Content Remove="NovaPasta2\**" />
-    <EmbeddedResource Remove="NovaPasta2\**" />
-    <None Remove="NovaPasta2\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Evolve" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Xml" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10" />
