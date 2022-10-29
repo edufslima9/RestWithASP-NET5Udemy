@@ -21,6 +21,7 @@
     <Folder Include="Hypermedia\NovaPasta\" />
     <Folder Include="Model\NovaPasta\" />
     <Folder Include="NovaPasta1\" />
+    <Folder Include="UploadDir\" />
     <Folder Include="NovaPasta\" />
     <Folder Include="Repository\NovaPasta\" />
   </ItemGroup>
