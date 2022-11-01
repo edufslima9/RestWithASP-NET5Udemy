@@ -95,10 +95,10 @@ namespace RestWithASPNETUdemy
             var connection = Configuration["PostgreeConnection:PostgreeConnectionString"];
             services.AddDbContext<PostgreSQLContext>(options => options.UseNpgsql(connection));
 
-            if (Environment.IsDevelopment())
+            /*if (Environment.IsDevelopment())
             {
                 MigrateDatabase(connection);
-            }
+            }*/
 
             services.AddMvc(options =>
             {
